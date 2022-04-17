@@ -10,13 +10,16 @@ import org.openqa.selenium.TakesScreenshot;
 
     public class Hooks {
 
+
+
+
        @After
         public void tearDown(Scenario scenario) {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
 
             Driver.closeDriver();
-           DB_Utility.destroy();
+             DB_Utility.destroy();
         }
     }
 
