@@ -3,12 +3,11 @@ package com.LibraryCT.step_defs;
 import com.LibraryCT.pages.HomePage;
 import com.LibraryCT.pages.LoginPage;
 import com.LibraryCT.utilities.DB_Utility;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class UserStory2 {
+public class UserStory2_maxim {
     HomePage hp = new HomePage();
     LoginPage lp = new LoginPage();
     String borrowedBooksNumber;
