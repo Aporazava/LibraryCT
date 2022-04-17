@@ -1,9 +1,11 @@
 package com.LibraryCT.pages;
 
 import com.LibraryCT.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,6 +38,10 @@ public class BooksPage {
         List<String> list = new ArrayList<>(Arrays.asList(nameOfBook.getText(), author.getText(), category.getText(), year.getText()));
         return list;
     }
+
+
+    @FindBy(xpath = "//select[@id='book_categories']/option[@value!='null']")
+    public List<WebElement> booksCategories;
 
 
 }
