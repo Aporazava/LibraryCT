@@ -15,28 +15,6 @@ public class DB_Utility {
     public static void main(String[] args) {
 
 
-        createConnection("jdbc:oracle:thin:@54.225.165.105:1521:XE", "hr", "hr");
-
-        runQuery("Select * From Regions");
-
-        try {
-            rs.next();
-
-            System.out.println(rs.getString(2));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-        try {
-            rs.first();
-            System.out.println(rs.getString(1));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-        System.out.println(getFirstData());
 
     }
 
@@ -89,7 +67,7 @@ public class DB_Utility {
 
         try {
             connection = DriverManager.getConnection(url, username, password);
-            System.out.println("CONNECTION SUCCESSFUL");
+//            System.out.println("CONNECTION SUCCESSFUL");
         } catch (SQLException e) {
             System.out.println("Connection has failed " + e.getMessage());
         }
