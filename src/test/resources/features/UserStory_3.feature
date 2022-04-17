@@ -5,4 +5,4 @@ Feature: As a librarian, I want to know the genre of books are being borrowed th
 
     Given Establish the database connection
     When I execute a query to find the most popular book genre
-    Then verify that "Classic" is the most popular book genre.
+    Then verify that "Anthology" is the most popular book genre.
