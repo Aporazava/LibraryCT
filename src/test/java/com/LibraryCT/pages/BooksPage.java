@@ -33,18 +33,9 @@ public class BooksPage {
 
 
     public List<String> getBookInfoFromUI() {
-        List<String> list = new ArrayList<>();
-
-        list.add(nameOfBook.getText());
-        list.add(author.getText());
-        list.add(category.getText());
-        list.add(year.getText());
-
+        List<String> list = new ArrayList<>(Arrays.asList(nameOfBook.getText(), author.getText(), category.getText(), year.getText()));
         return list;
     }
 
-
-    @FindBy(xpath = "//div[text()='Showing 1 to 1 of 1 entries']")
-    public WebElement oneOfOne;
 
 }
