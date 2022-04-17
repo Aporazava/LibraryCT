@@ -8,7 +8,7 @@ import org.junit.Assert;
 
 import java.util.*;
 
-public class UserStory1 {
+public class UserStory1_maxim {
 
     @Given("Establish the database connection")
     public void establish_the_database_connection() {

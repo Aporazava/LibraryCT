@@ -1,5 +1,6 @@
 package com.LibraryCT.step_defs;
 
+import com.LibraryCT.utilities.DB_Utility;
 import com.LibraryCT.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
@@ -15,6 +16,7 @@ import org.openqa.selenium.TakesScreenshot;
             scenario.attach(screenshot, "image/png", scenario.getName());
 
             Driver.closeDriver();
+           DB_Utility.destroy();
         }
     }
 
