@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         glue = "com/LibraryCT/step_defs",
         dryRun = false,
      publish = true,
-        tags = "@CY27-107"
+        tags = ""
 )
 public class CukesRunner {
 
