@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>20 Apr 2022, 20:31</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>10</td>
+              <td class="duration" data-value="4163217800">4.163</td>
+              <td class="duration" data-value="4163217800">22.992</td>
+              <td class="duration" data-value="41632178000">41.632</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory1_maxim.establish_the_database_connection()</td>
+              <td>9</td>
+              <td class="duration" data-value="208886555">0.208</td>
+              <td class="duration" data-value="208886555">0.777</td>
+              <td class="duration" data-value="1879979000">1.879</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory1_maxim.execute_query_to_get_all_columns()</td>
+              <td>1</td>
+              <td class="duration" data-value="34995000">0.034</td>
+              <td class="duration" data-value="34995000">0.034</td>
+              <td class="duration" data-value="34995000">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory1_maxim.execute_query_to_get_all_i_ds_from_users()</td>
+              <td>1</td>
+              <td class="duration" data-value="28385000">0.028</td>
+              <td class="duration" data-value="28385000">0.028</td>
+              <td class="duration" data-value="28385000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory1_maxim.verify_all_users_has_unique_id()</td>
+              <td>1</td>
+              <td class="duration" data-value="5757000">0.005</td>
+              <td class="duration" data-value="5757000">0.005</td>
+              <td class="duration" data-value="5757000">0.005</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory1_maxim.verify_the_below_columns_are_listed_in_result(java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="7738000">0.007</td>
+              <td class="duration" data-value="7738000">0.007</td>
+              <td class="duration" data-value="7738000">0.007</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory2_maxim.borrowed_books_number_information_must_match_with_db()</td>
+              <td>1</td>
+              <td class="duration" data-value="12700000">0.012</td>
+              <td class="duration" data-value="12700000">0.012</td>
+              <td class="duration" data-value="12700000">0.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory2_maxim.i_am_in_the_homepage_of_the_library_app()</td>
+              <td>1</td>
+              <td class="duration" data-value="6659550000">6.659</td>
+              <td class="duration" data-value="6659550000">6.659</td>
+              <td class="duration" data-value="6659550000">6.659</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory2_maxim.i_take_borrowed_books_number()</td>
+              <td>1</td>
+              <td class="duration" data-value="487084000">0.487</td>
+              <td class="duration" data-value="487084000">0.487</td>
+              <td class="duration" data-value="487084000">0.487</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory3_maxim.i_execute_a_query_to_find_the_most_popular_book_genre()</td>
+              <td>1</td>
+              <td class="duration" data-value="14376000">0.014</td>
+              <td class="duration" data-value="14376000">0.014</td>
+              <td class="duration" data-value="14376000">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory3_maxim.verify_that_classic_is_the_most_popular_book_genre(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2980000">0.002</td>
+              <td class="duration" data-value="2980000">0.002</td>
+              <td class="duration" data-value="2980000">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory4_maxim.i_execute_a_query_to_find_the_most_popular_user()</td>
+              <td>1</td>
+              <td class="duration" data-value="13489000">0.013</td>
+              <td class="duration" data-value="13489000">0.013</td>
+              <td class="duration" data-value="13489000">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory4_maxim.verify_test_student_number_is_the_user_who_reads_the_most(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="923000">0.000</td>
+              <td class="duration" data-value="923000">0.000</td>
+              <td class="duration" data-value="923000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory5_maxim.book_information_must_match_the_database(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="178898500">0.178</td>
+              <td class="duration" data-value="178898500">0.201</td>
+              <td class="duration" data-value="715594000">0.715</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory5_maxim.i_login_as_a_librarian()</td>
+              <td>4</td>
+              <td class="duration" data-value="6978616500">6.978</td>
+              <td class="duration" data-value="6978616500">8.537</td>
+              <td class="duration" data-value="27914466000">27.914</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory5_maxim.i_navigate_to_page(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="557038750">0.557</td>
+              <td class="duration" data-value="557038750">0.584</td>
+              <td class="duration" data-value="2228155000">2.228</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory5_maxim.i_open_book(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="1871200000">1.871</td>
+              <td class="duration" data-value="1871200000">1.920</td>
+              <td class="duration" data-value="7484800000">7.484</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory6_maxim.i_execute_a_query_to_get_book_categories()</td>
+              <td>1</td>
+              <td class="duration" data-value="141364000">0.141</td>
+              <td class="duration" data-value="141364000">0.141</td>
+              <td class="duration" data-value="141364000">0.141</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory6_maxim.i_take_all_book_categories_in_ui()</td>
+              <td>1</td>
+              <td class="duration" data-value="936391000">0.936</td>
+              <td class="duration" data-value="936391000">0.936</td>
+              <td class="duration" data-value="936391000">0.936</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory6_maxim.login_as_a_librarian()</td>
+              <td>1</td>
+              <td class="duration" data-value="6337889000">6.337</td>
+              <td class="duration" data-value="6337889000">6.337</td>
+              <td class="duration" data-value="6337889000">6.337</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory6_maxim.navigate_to_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="560212000">0.560</td>
+              <td class="duration" data-value="560212000">0.560</td>
+              <td class="duration" data-value="560212000">0.560</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.LibraryCT.step_defs.UserStory6_maxim.verify_book_categories_from_ui_match_the_book_categories_table_from_db()</td>
+              <td>1</td>
+              <td class="duration" data-value="241000">0.000</td>
+              <td class="duration" data-value="241000">0.000</td>
+              <td class="duration" data-value="241000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>22</td>
+            <td>51</td>
+            <td class="duration">1.903</td>
+            <td class="duration">41.632</td>
+            <td class="duration">1:37.099</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

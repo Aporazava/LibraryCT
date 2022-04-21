@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="97.862">
+    <testcase classname="As a data consumer, I want the user information are stored in mySql DB correctly in users table." name="verify users has unique IDs" time="23.954">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+When Execute query to get all IDs from users................................passed
+Then verify all users has unique ID.........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want the user information are stored in mySql DB correctly in users table." name="verify users table columns" time="6.088">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+When Execute query to get all columns.......................................passed
+Then verify the below columns are listed in result..........................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a librarian, I want to know the amount of borrowed books" name="verify the amount of borrowed books" time="7.649">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+When I am in the homepage of the library app................................passed
+When I take borrowed books number...........................................passed
+Then borrowed books number information must match with DB...................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a librarian, I want to know the genre of books are being borrowed the most" name="verify the common book genre that’s being borrowed" time="5.507">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+When I execute a query to find the most popular book genre..................passed
+Then verify that "Anthology" is the most popular book genre.................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a librarian, I want to know who is the most popular user" name="verify who is the most popular user who reads the most" time="5.721">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+When I execute a query to find the most popular user........................passed
+Then verify "Test Student 1" is the user who reads the most.................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book information are match." name="Verify book information with DB" time="9.48">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+Given I login as a librarian................................................passed
+When I navigate to "Books" page.............................................passed
+When I open book "Chordeiles minor".........................................passed
+Then book information must match the Database for "Chordeiles minor"........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book information are match." name="Verify book information with DB 2" time="9.467">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+Given I login as a librarian................................................passed
+When I navigate to "Books" page.............................................passed
+When I open book "Lama glama"...............................................passed
+Then book information must match the Database for "Lama glama"..............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book information are match." name="Verify book information with DB 3" time="9.558">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+Given I login as a librarian................................................passed
+When I navigate to "Books" page.............................................passed
+When I open book "1984".....................................................passed
+Then book information must match the Database for "1984"....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book information are match." name="Verify book information with DB 4" time="11.569">
+        <system-out>
+            <![CDATA[Given Establish the database connection.....................................passed
+Given I login as a librarian................................................passed
+When I navigate to "Books" page.............................................passed
+When I open book "Caiman crocodilus"........................................passed
+Then book information must match the Database for "Caiman crocodilus".......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="As a data consumer, I want UI and DB book categories match." name="verify book categories with DB" time="8.342">
+        <system-out>
+            <![CDATA[Given login as a librarian..................................................passed
+When navigate to "Books" page...............................................passed
+And I take all book categories in UI........................................passed
+And I execute a query to get book categories................................passed
+Then verify book categories from UI match the book_categories table from DB..passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
